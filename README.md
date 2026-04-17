@@ -125,9 +125,3 @@ jupyter notebook pulsar_net.ipynb
 The [HTRU2 dataset](https://www.kaggle.com/datasets/charitarth/pulsar-dataset-htru2) was collected during the High Time Resolution Universe Survey. It contains 17,898 candidates, of which 1,639 are confirmed pulsars.
 
 > R. J. Lyon et al., "Fifty Years of Pulsar Candidate Selection", MNRAS, 2016.
-
----
-
-## License
-
-MIT
