@@ -12,7 +12,7 @@
 
 Pulsars are rapidly rotating neutron stars that are extremely rare in radio survey data, making up less than 10% of candidates. The rest is Radio Frequency Interference (RFI) and noise.
 
-**Pulsar-Net** is an end-to-end machine learning pipeline trained on the [HTRU2 dataset](https://www.kaggle.com/datasets/charitarth/pulsar-dataset-htru2) that distinguishes genuine pulsar signals from terrestrial interference. The pipeline expands the original 8 statistical features to **19 physics-informed features**, then trains a tuned XGBoost classifier with threshold optimization and full SHAP interpretability.
+**Pulsar-Net** is an end-to-end machine learning pipeline trained on the [HTRU2 dataset](https://www.kaggle.com/datasets/charitarth/pulsar-dataset-htru2) that distinguishes genuine pulsar signals from terrestrial interference. The pipeline expands the original 8 statistical features to **19 physics-informed features**, then trains a tuned XGBoost classifier with threshold optimisation and full SHAP interpretability.
 
 ---
 
@@ -56,12 +56,12 @@ Models how the signal has interacted with the Interstellar Medium (ISM) during p
 A composite score built from the kurtosis of the pulse profile and the sharpness index. It amplifies the joint statistical fingerprint that separates a real pulsar from RFI, giving the model a single high-signal feature that encodes both profile shape and intensity.
 
 **`energy_concentration`**
-Quantifies how tightly the signal energy is focused within the pulse window. A pulsar's energy arrives in a precise, narrow burst tied to its rotation period. This feature measures that concentration directly from the mean profile and sharpness index.
+Quantifies how tightly the signal energy is focused within the pulse window. A pulsar's energy arrives in a precise, narrow burst tied to its rotation period. This feature measures the concentration directly from the mean profile and sharpness index.
 
 **`log_dm_skew`**
-A log-normalized measure of how asymmetric the dispersion measure distribution is. The DM skew captures subtle differences in how the pulse has spread through the ISM, and the log transform stabilizes the extreme range of values seen in real survey data.
+A log-normalised measure of how asymmetric the dispersion measure distribution is. The DM skew captures subtle differences in how the pulse has spread through the ISM, and the log transform stabilises the extreme range of values seen in real survey data.
 
-### Tier 3 — Log-Normalizing Transforms
+### Tier 3 — Log-Normalising Transforms
 
 Radio survey distributions are heavily right-skewed, which can compress important variation at the low end of the scale. Logarithmic transforms were applied to three features to recover this resolution and help the model distinguish subtle signal differences:
 
@@ -112,7 +112,7 @@ pulsar-net/
 ## Quickstart
 
 ```bash
-git clone https://github.com/your-username/pulsar-net.git
+git clone https://github.com/nnourue/pulsar-net.git
 cd pulsar-net
 pip install -r requirements.txt
 jupyter notebook pulsar_net.ipynb
